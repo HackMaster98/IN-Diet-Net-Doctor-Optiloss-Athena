@@ -680,7 +680,25 @@
 				
 				</div>
                               <span class="text-pr-10-b">IMPORTANT: </span>
-                          Offer valid until: <strong>31.03.2025</strong> </div>
+                          Offer valid until: <span id="endPromotionTime">
+                    <script>
+                      function addZero(i) {
+                        if (i < 10) {
+                          i = "0" + i;
+                        }
+                        return i;
+                      }
+                      var days = 0;
+                      var date = new Date();
+                      var last = new Date(date.getTime() - (days * 24 * 60 * 60 * 1000));
+                      var day = addZero(last.getDate());
+                      var month = addZero(last.getMonth() + 1);
+                      var year = last.getFullYear();
+                      var sNow = day + "." + month + "." + year;
+                      document.write(sNow);
+                    </script>
+                  </span>
+				</div>
                             <!-- Timer -->
                             <div class="fw-bold mt-3">
                       <span style="display: none; font-size: 1px;">A delicious meal jumped the lazy around the city. My friend enjoyed and slept with the quick around the city.</span>          Time left for this discount : <span id="endPromotionTimer" style="font-weight: bold; color:#d1021f;">43:29</span>
